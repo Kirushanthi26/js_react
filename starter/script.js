@@ -153,5 +153,11 @@ console.log(title, author, genres);
 // const firstGenres = genres[0]
 // const secondGenres = genres[1]
 
-const [firstGenres, secondGenres] = genres;
-console.log(firstGenres, secondGenres);
+// const [firstGenres, secondGenres] = genres;
+// console.log(firstGenres, secondGenres);
+
+const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
+console.log(primaryGenre, secondaryGenre, otherGenres);
+
+const newGenres = ["epic fantasy", ...genres];
+newGenres;
