@@ -183,3 +183,21 @@ const summary = `${title}, a ${
 } been adapted as a movie`;
 
 summary;
+
+//And &&
+console.log(true && "hello");
+console.log(book.hasMovieAdaptation && "hello");
+
+//OR ||
+console.log(true || "Some string");
+console.log(false || "Some string");
+console.log(0 || "Some string");
+
+console.log(book.translations.french);
+const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
+spanishTranslation;
+
+//?? - it return 2nd value when 1st value null or undifined
+console.log(book.reviews.librarything.reviewsCount);
+const count = book.reviews.librarything.reviewsCount ?? "no data";
+count;
