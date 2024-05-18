@@ -198,6 +198,15 @@ const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
 spanishTranslation;
 
 //?? - it return 2nd value when 1st value null or undifined
-console.log(book.reviews.librarything.reviewsCount);
-const count = book.reviews.librarything.reviewsCount ?? "no data";
+console.log(book.reviews.librarything?.reviewsCount);
+const count = book.reviews.librarything?.reviewsCount ?? "no data";
 count;
+
+const getTotalReviewCount = (book) => {
+  const goodRead = book.reviews.goodreads.reviewsCount;
+  const libraryThing = book.reviews.librarything?.reviewsCount ?? 0;
+
+  return goodRead + libraryThing;
+};
+
+console.log(getTotalReviewCount(book));
