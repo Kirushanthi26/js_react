@@ -170,3 +170,16 @@ const updateBook = {
 };
 
 updateBook;
+
+const getYear = (str) => str.split("-")[0];
+//console.log(getYear(book.publicationDate));
+
+const summary = `${title}, a ${
+  book.pages
+}-page long book, was written by ${author} and published in ${getYear(
+  book.publicationDate
+)}. The book has ${
+  book.hasMovieAdaptation ? "" : "not"
+} been adapted as a movie`;
+
+summary;
