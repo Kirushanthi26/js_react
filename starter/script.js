@@ -166,6 +166,7 @@ newGenres;
 const updateBook = {
   ...book,
   moviePublicationDate: "2001-12-08",
+  pages: 1212,
 };
 
 updateBook;
