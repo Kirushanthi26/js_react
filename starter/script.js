@@ -161,3 +161,11 @@ console.log(primaryGenre, secondaryGenre, otherGenres);
 
 const newGenres = ["epic fantasy", ...genres];
 newGenres;
+
+//current obj, properties
+const updateBook = {
+  ...book,
+  moviePublicationDate: "2001-12-08",
+};
+
+updateBook;
